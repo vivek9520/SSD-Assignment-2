@@ -23,7 +23,7 @@ router.get(
 router.get("/google/redirect", passport.authenticate("google"), (req, res) => {
   res.redirect("/dashboard");
 });
-
+//change
 // sign out from google auth
 router.get("/logout", (req, res) => {
   req.logOut();
