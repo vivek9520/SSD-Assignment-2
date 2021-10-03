@@ -6,7 +6,7 @@ const router = Router();
 router.get("/", (req, res) => {
   res.render("index.html", { title: "SSD Assignment" });
 });
-
+//code change
 router.get("/dashboard", (req, res) => {
   // check whether user is has values if not redirect to google auth
   if (typeof req.user == "undefined") res.redirect("/auth/login/google");
@@ -48,7 +48,7 @@ router.get("/facebook", (req, res) => {
     res.render("facebook.html", parseData);
   }
 });
-
+//code change
 router.post("/upload", (req, res) => {
   // not auth
   if (!req.user) res.redirect("/auth/login/google");
