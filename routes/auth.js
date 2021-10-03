@@ -6,7 +6,7 @@ const KEYS = require("../configs/keys");
 let router = Router();
 
 router.get("/login", (req, res) => {
-  // check authentication to redirect to relavant page
+// check authentication to redirect to relavant page
   if (req.user) res.redirect("/dashboard");
   else res.redirect("/auth/login/google");
 });
@@ -39,7 +39,7 @@ router.get(
   "/facebook/redirect",
   passport.authenticate("facebook", { failureRedirect: "/login" }),
   function (req, res) {
-    // Successful authentication, redirect home.
+  // Successful authentication, redirect home.
     res.redirect("/facebook");
   }
 );
